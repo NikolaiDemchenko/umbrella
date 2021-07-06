@@ -1,87 +1,118 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
+
 body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
-h1 {
-    position: absolute;
-    top: 5%;
-    left: 53%;
-}
-.umbrella1 {
-    position: absolute;
-    top: 34%;
-    left: 87%;
-    width: 14%;
-    height: 17%;
-    cursor: pointer;
-}
-.umbrella2 {
-    position: absolute;
-    top: 48%;
-    left: 32%;
-    width: 14%;
-    height: 17%;
-    cursor: pointer;
-}
-.umbrella3 {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    width: 35%;
-    height: 9%;
-    cursor: pointer;
-}
-.umbrella4 {
-    position: absolute;
-    top: 45%;
-    left: 58%;
-    width: 17%;
-    height: 30%;
-    cursor: pointer;
-}
-.umbrella5 {
-    position: absolute;
-    top: 75%;
-    left: 33%;
-    width: 25%;
-    height: 25%;
-    cursor: pointer;
-}
-.btn {
-    width: 40%;
-    height: 8%;
-    transform: translateY(100%);
-    transition: transform 1s;
-    cursor: pointer;
-}
-.btn-animation {
-    transform: translateY(-300%);
-}
-.background-img {
-    width: 100%;
-    height: 100%;
-}
-.hide {
-    visibility: hidden;
-}
+
 .game-box {
-    position: relative;
-    height: 100%;
-    width: 450px;
-    background-image: url("img/g4.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  position: relative;
+  top: "";
+  left: "";
+  width: "";
+  height: "";
+  height: 100%;
+  width: 450px;
+  background-image: url("img/g4.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
+
+.number-of-umbrellas {
+  position: absolute;
+  top: 6%;
+  left: 53%;
+  width: "";
+  height: "";
+  font-size: 3vh;
+  color: #431b00;
+}
+
+.umbrella1 {
+  position: absolute;
+  top: 34%;
+  left: 87%;
+  width: 14%;
+  height: 17%;
+  cursor: pointer;
+}
+
+.umbrella2 {
+  position: absolute;
+  top: 48%;
+  left: 32%;
+  width: 14%;
+  height: 17%;
+  cursor: pointer;
+}
+
+.umbrella3 {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 35%;
+  height: 9%;
+  cursor: pointer;
+}
+
+.umbrella4 {
+  position: absolute;
+  top: 45%;
+  left: 58%;
+  width: 17%;
+  height: 30%;
+  cursor: pointer;
+}
+
+.umbrella5 {
+  position: absolute;
+  top: 75%;
+  left: 33%;
+  width: 25%;
+  height: 25%;
+  cursor: pointer;
+}
+
+.btn {
+  width: 35%;
+  height: 7%;
+  transform: translateY(100%);
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.btn-animation {
+  transform: translateY(-500%);
+}
+
+.umbrella-hide-anim {
+  animation: 1s umbrella-hide;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes umbrella-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
