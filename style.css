@@ -114,5 +114,10 @@ body {
     opacity: 0;
   }
 }
+@media screen and (max-width: 1080px) {
+  .game-box {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
