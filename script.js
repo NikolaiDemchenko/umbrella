@@ -4,14 +4,23 @@ window.addEventListener("DOMContentLoaded", () => {
          numberOfFoundUmbrellas = document.querySelector('.number-of-found-umbrellas'),
          btn = document.querySelector('.btn'),
          audio = document.querySelector('.music'),
-         umbrella = document.querySelectorAll('.umbrella');
+         umbrella = document.querySelectorAll('.umbrella'),
+         startText = document.querySelector('.start-text');
    let timerId = 0;
 
    gameBox.addEventListener('click', (event) => {
-
-      if (event.target.classList.contains('umbrella') && numberOfFoundUmbrellas.textContent !== '3' || event.target.classList.contains('umbrella') && btn.classList.contains('hide')) {
+      if (startText.classList.contains('hide') === false) {
+          setTimeout(() => {
+              startText.classList.add('hide');
+          }, 900);
+          startText.classList.add('text-hide-animation');
+          umbrella.forEach(item => {
+              item.style.cursor = 'pointer';
+          });
+      }
+      else if (event.target.classList.contains('umbrella') && numberOfFoundUmbrellas.textContent !== '3' || event.target.classList.contains('umbrella') && btn.classList.contains('hide')) {
           numberOfFoundUmbrellas.innerText = +numberOfFoundUmbrellas.textContent + 1;
-          event.target.style.cursor = 'auto';
+          event.target.style.cursor = 'default';
           setTimeout(() => {
               event.target.classList.toggle('hide');
           },900);
@@ -22,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (numberOfFoundUmbrellas.textContent === '3' && event.target !== gameBox) {
           umbrella.forEach(item => {
              if (item.classList.contains('hide') === false) {
-                 item.style.cursor = 'auto';
+                 item.style.cursor = 'default';
              }
           });
           btn.classList.remove('hide');
