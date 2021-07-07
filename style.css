@@ -31,6 +31,22 @@ body {
   align-items: flex-end;
 }
 
+.start-text {
+  align-self: center;
+  z-index: 1;
+  font-size: 5vh;
+  text-align: center;
+  cursor: default;
+}
+
+.first-paragraph {
+  color: #fffbc5;
+}
+
+.second-paragraph {
+  color: #ffd626;
+}
+
 .number-of-umbrellas {
   position: absolute;
   top: 6%;
@@ -47,7 +63,6 @@ body {
   left: 87%;
   width: 14%;
   height: 17%;
-  cursor: pointer;
 }
 
 .umbrella2 {
@@ -56,7 +71,6 @@ body {
   left: 32%;
   width: 14%;
   height: 17%;
-  cursor: pointer;
 }
 
 .umbrella3 {
@@ -65,7 +79,6 @@ body {
   left: 0;
   width: 35%;
   height: 9%;
-  cursor: pointer;
 }
 
 .umbrella4 {
@@ -74,7 +87,6 @@ body {
   left: 58%;
   width: 17%;
   height: 30%;
-  cursor: pointer;
 }
 
 .umbrella5 {
@@ -83,7 +95,6 @@ body {
   left: 33%;
   width: 25%;
   height: 25%;
-  cursor: pointer;
 }
 
 .btn {
@@ -102,6 +113,10 @@ body {
   animation: 1s umbrella-hide;
 }
 
+.text-hide-animation {
+  animation: 1s text-hide;
+}
+
 .hide {
   display: none;
 }
@@ -111,6 +126,16 @@ body {
     opacity: 1;
   }
   to {
+    opacity: 0;
+  }
+}
+@keyframes text-hide {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(500%);
     opacity: 0;
   }
 }

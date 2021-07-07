@@ -27,6 +27,19 @@ body
   justify-content: center
   align-items: flex-end
 
+.start-text
+  align-self: center
+  z-index: 1
+  font-size: 5vh
+  text-align: center
+  cursor: default
+
+.first-paragraph
+  color: #fffbc5
+
+.second-paragraph
+  color: #ffd626
+
 .number-of-umbrellas
   @include position(absolute, 6%, 53%)
   font-size: 3vh
@@ -34,23 +47,18 @@ body
 
 .umbrella1
   @include position(absolute,34%, 87%, 14%, 17%)
-  cursor: pointer
 
 .umbrella2
   @include position(absolute,48%, 32%, 14%, 17%)
-  cursor: pointer
 
 .umbrella3
   @include position(absolute,75%, 0, 35%, 9%)
-  cursor: pointer
 
 .umbrella4
   @include position(absolute,45%, 58%, 17%, 30%)
-  cursor: pointer
 
 .umbrella5
   @include position(absolute,75%, 33%, 25%, 25%)
-  cursor: pointer
 
 .btn
   width: 35%
@@ -65,6 +73,9 @@ body
 .umbrella-hide-anim
   animation: 1s umbrella-hide
 
+.text-hide-animation
+  animation: 1s text-hide
+
 .hide
   display: none
 
@@ -72,6 +83,14 @@ body
   from
     opacity: 1
   to
+    opacity: 0
+
+@keyframes text-hide
+  from
+    transform: translateY(0)
+    opacity: 1
+  to
+    transform: translateY(500%)
     opacity: 0
 
 @media screen and (max-width: 1180px)
